@@ -1,0 +1,314 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    outline: 0;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+i {
+    border: 0;
+}
+
+body {
+    font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
+    font-size: 1em;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* 상단메뉴의 기본적인 스타일 정의 */
+.top_menu {
+    height: 3em;
+    background: yellowgreen;
+}
+
+.top_menu li {
+    margin: 0.8em;
+    display: block;
+    float: left;
+    color: white;
+}
+
+/* 상단메뉴 - materialize.css 파일에서 필요한 내용만 복사해서 원하는 내용으로 수정 */
+nav {
+    color: #fff;
+    background-color: yellowgreen;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    position: fixed;
+    z-index: 999;
+}
+
+nav a {
+    color: #fff;
+}
+
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+/* 상단메뉴의 로고(이름) 스타일 */
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 0;
+}
+
+nav .brand-logo.center {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+nav .brand-logo.right {
+    right: 0.5rem;
+    padding: 0;
+}
+
+nav .brand-logo.right {
+    right: 0.5rem;
+    padding: 0;
+}
+
+/* 상단메뉴의 글자 메뉴 스타일*/
+nav ul {
+    margin: 0;
+}
+
+nav ul li {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    float: left;
+    padding: 0;
+}
+
+nav ul li.active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+
+/* 사이드 메뉴 */
+/* 사이드바를 보여주기 위한 버튼 스타일. 이 버튼이미지는 포토샵에서 직접 만듬 */
+.menuicon {
+    background: url(img/menuicon.png) no-repeat;
+    border: 0;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
+/* 반응형 웹을 위한 미디어 쿼리 - 창 너비가 699px 이하일 때 : 상단 메뉴 높이가 줄고 글자 메뉴가 사라지고 사이드메뉴 버튼이 나타난다. */
+@media only screen and (max-width: 699px) {
+    nav .brand-logo {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    nav .brand-logo.left,
+    nav .brand-logo.right {
+        padding: 0;
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    nav .brand-logo.left {
+        left: 0.5rem;
+    }
+
+    nav .brand-logo.right {
+        right: 0.5rem;
+        left: auto;
+    }
+
+    .hide-on-small-only,
+    .hide-on-small-and-down {
+        display: none !important;
+    }
+
+    .menuicon {
+        display: block !important;
+        float: left;
+        width: 2em;
+        margin-top: 0.8em;
+    }
+}
+
+/* 반응형 웹을 위한 미디어 쿼리 - 창 너비가 798px 이상일 때 */
+@media only screen and (min-width: 798px) {
+    nav.nav-extended .nav-wrapper {
+        min-height: 64px;
+    }
+
+    nav,
+    nav .nav-wrapper i,
+    nav a.sidenav-trigger,
+    nav a.sidenav-trigger i {
+        height: 64px;
+        line-height: 64px;
+    }
+
+    .navbar-fixed {
+        height: 64px;
+    }
+
+    .container {
+        width: 70%;
+    }
+
+    .menuicon {
+        display: none !important;
+    }
+
+}
+
+/* 하단(footer) */
+.footer {
+    background-color: olivedrab;
+    margin-top: 1em;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* 글자 메뉴(봄, 여름, 가을, 겨울) */
+.spring_container {
+    margin: 0 auto;
+    width: 70em;
+}
+
+.spring_container a {
+    color: darkorange;
+}
+
+.spring_container a:hover {
+    color: blue;
+}
+
+.spring01 {
+    background-color: lightgoldenrodyellow;
+}
+
+.spring01 ul li {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+.spring02 {
+    background-color: yellow;
+    line-height: 2em;
+}
+
+.spring02 ul {
+    display: block;
+    float: left;
+}
+
+.spring02 ul li {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+.spring03 {
+    background-color: lightgrey;
+    line-height: 2em;
+}
+
+.spring03 ul {
+    display: block;
+    float: left;
+}
+
+.spring03 ul li {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+/* 반응형 웹을 위한 미디어 쿼리 - 창 너비가 798px 이상일 때 */
+@media (min-width: 798px) {
+    .spring01 {
+        height: 26em;
+    }
+
+    .spring01 ul {
+        display: block;
+        float: left;
+    }
+
+    .spring01 li {
+        line-height: 2em;
+    }
+
+    .spring01-1 {
+        width: 50%;
+    }
+
+    .spring01-1 img {
+        width: 100%;
+    }
+
+    .spring01-2 {
+        width: 5%;
+    }
+
+    .spring01-3 {
+        width: 45%;
+        padding-top: 7%;
+    }
+
+}
+
+/* 반응형 웹을 위한 미디어 쿼리 - 창 너비가 699px 이하일 때 : 사진 크기가 줄어들고 내용의 여백이 줄어든다. */
+@media (max-width: 699px) {
+    .spring01-2 {
+        display: none;
+    }
+
+    .spring01 img {
+        width: 30%
+    }
+}
